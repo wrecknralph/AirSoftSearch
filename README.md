@@ -4,7 +4,6 @@
 A website that is based around Airsoft.  It takes a keyword and generates search URLs for various Airsoft sites
 
 ## **Prerequsities**
-Markup : * Bullet list
   * install .net core 6.0 sdk
 
 ## **Helpful Links**
