@@ -1,4 +1,5 @@
 ﻿using AirsoftSearch.Models;
+using AirSoftSearch.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -16,8 +17,11 @@ namespace AirsoftSearch.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(SearchModel searchModel)
-        {        
-            ViewBag.ResponseHTML = $"<a href=\"https://www.evike.com/s/?q={searchModel.SearchTerm}&x=0&y=0\" target=\"_blank\">Evike.com<a>";
+        {
+            string url = $"https://www.evike.com/s/?q={searchModel.SearchTerm}&x=0&y=0";
+            ViewBag.EvikeLink = $"<a href=\"{url}\" target=\"_blank\">Evike.com<a>";
+            ViewBag.EvikeImg = $"<a href=\"{url}\" target=\"_blank\"><img src=\"{GlobalFunctions.CreateUrlImage(url)}\" width=\"500px\" /><a>";            
+
             return View();
         }
         public IActionResult Index()
