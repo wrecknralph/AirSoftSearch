@@ -19,13 +19,41 @@
             </div>
         </form>
         <br/><br/>
-        @if (@ViewBag.ResponseHTML != null)
-        {
-            <div>
-                <div class="display-field" style="font-weight: bold;">
-                    @Html.Raw(ViewBag.ResponseHTML)
-                </div>
-            </div>
-        }
+        <table>
+            <tr>
+                <td>
+                    @if (@ViewBag.EvikeLink != null)
+                    {
+
+                        <div>
+                            <div class="display-field" style="font-weight: bold;">
+                                @Html.Raw(ViewBag.EvikeLink)
+                            </div>
+                        </div>
+                    }
+                    @if (@ViewBag.EvikeImg != null)
+                    {
+                        <div>
+                            <div class="display-field" style="font-weight: bold;">
+                                @Html.Raw(ViewBag.EvikeImg)
+                            </div>
+                        </div>
+
+                    }
+                </td>
+                <td>                    
+                </td>
+                <td>                    
+                </td>
+            </tr>
+            <tr>
+                <td>                    
+                </td>
+                <td>                    
+                </td>
+                <td>                    
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
